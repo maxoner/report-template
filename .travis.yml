@@ -17,4 +17,4 @@ deploy:
   file: "report-template.pdf"
   skip_cleanup: true
   on:
-    repo: iamm-templates/report-template
+    repo: polytechnic-templates/report-template
