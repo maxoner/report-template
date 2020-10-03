@@ -1,4 +1,4 @@
-# Шаблон отчёта (СПбПУ) [![Build Status](https://travis-ci.org/iamm-templates/report-template.svg?branch=master)](https://travis-ci.org/iamm-templates/report-template)
+# Шаблон отчёта (СПбПУ) [![Build Status](https://travis-ci.org/polytechnic-templates/report-template.svg?branch=master)](https://travis-ci.org/polytechnic-templates/report-template) [![Semantic Versions](https://img.shields.io/badge/%F0%9F%9A%80-semantic%20versions-informational.svg)](https://semver.org/)
 В этом проекте представлен шаблон отчёта по лабораторной или курсовой работе. Это форк https://github.com/kspt-templates/report, переделанный под меня. Может, и Вам будет удобнее.
 
 **Важно!** Шаблон не идеален и соответствует не всем требованиям.
