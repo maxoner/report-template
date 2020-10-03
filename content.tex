@@ -5,9 +5,9 @@
 \newpage
 \section{Заполнение шаблона}
 \begin{itemize}
-    \item Изменить \textbf{config.tex}: имя студента, название предмета и пр. параметры указаны именно там
-    \item Заполнить \textbf{content.tex} - файл, который будет содержать весь текст отчёта, от вступления до заключения.
-    \item Добавить используемую литературу (если есть) в \textbf{refs.bib}. Для удобного поиска источников можно воспользоваться Google Books. Использованные источники можно указывать с помощью команды \textbf{\\cite\{name\_of\_ref\}}
+	\item Изменить \textbf{config.tex}: имя студента, название предмета и пр. параметры указаны именно там
+	\item Заполнить \textbf{content.tex} - файл, который будет содержать весь текст отчёта, от вступления до заключения.
+	\item Добавить используемую литературу (если есть) в \textbf{refs.bib}. Для удобного поиска источников можно воспользоваться Google Books. Использованные источники можно указывать с помощью команды \textbf{\\cite\{name\_of\_ref\}}
 \end{itemize}
 Далее представлены различные примеры.
 
@@ -19,8 +19,8 @@ bash \cite{bash} \\
 \subsection{Список}
 
 \begin{itemize}
-\item первый элемент списка
-\item второй элемент списка
+	\item первый элемент списка
+	\item второй элемент списка
 \end{itemize}
 
 
@@ -29,7 +29,7 @@ bash \cite{bash} \\
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.7]{sample}
-		\caption{название картинки} 
+		\caption{название картинки}
 		\label{pic:pic_name} % название для ссылок внутри кода
 	\end{center}
 \end{figure}
@@ -46,44 +46,44 @@ bash \cite{bash} \\
 \begin{table}[H]
 	\caption{Одна таблица}
 	\begin{center}
-        \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill} } lcc}
-            \toprule
-            Element & First & Second \\
-            \midrule
-            One       & -    & -    \\
-            Two       & -    & -    \\
-            Three     & -    & -    \\
-            Four      & -    & -    \\
-            \bottomrule
-        \end{tabular*}
-        \label{tabular:tab_examp_1}
-    \end{center}
-    
-    \caption{Другая таблица}
+		\begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill} } lcc}
+			\toprule
+			Element & First & Second \\
+			\midrule
+			One       & -    & -    \\
+			Two       & -    & -    \\
+			Three     & -    & -    \\
+			Four      & -    & -    \\
+			\bottomrule
+		\end{tabular*}
+		\label{tabular:tab_examp_1}
+	\end{center}
+
+	\caption{Другая таблица}
 	\begin{center}
 		\begin{tabular}{|l|c|r|}
 			\hline
-			top left & top center & top right\\ \hline
-			bot left & bot center & bot right\\ \hline
+			top left & top center & top right \\ \hline
+			bot left & bot center & bot right \\ \hline
 		\end{tabular}
 		\label{tabular:tab_examp_2}
 	\end{center}
 \end{table}
 
 \begin{landscape}
-\subsection{Поворот страницы}
-Поворачиваем страницу, потому что можем.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=25.5cm]{diagram}
-    \caption{Да.}
-\end{figure}
+	\subsection{Поворот страницы}
+	Поворачиваем страницу, потому что можем.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=25.5cm]{diagram}
+		\caption{Да.}
+	\end{figure}
 \end{landscape}
 
 \subsection{Листинг}
 \begin{code}
-    \inputminted[breaklines=true, xleftmargin=1em, linenos, frame=single, framesep=10pt, fontsize=\footnotesize, firstline=1, lastline=33]{haskell}{listings/Code.hs}
-    \caption{Code.hs --- функциональный код в массы!}
+	\inputminted[breaklines=true, xleftmargin=1em, linenos, frame=single, framesep=10pt, fontsize=\footnotesize, firstline=1, lastline=33]{haskell}{listings/Code.hs}
+	\caption{Code.hs --- функциональный код в массы!}
 \end{code}
 
 \newpage

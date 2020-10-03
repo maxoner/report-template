@@ -4,10 +4,10 @@
 
 % локализация
 \addto\captionsrussian{
-  \renewcommand{\figurename}{Рисунок}%
-  \renewcommand{\partname}{Глава}
-  \renewcommand{\contentsname}{\centerline{Содержание}}
-  \renewcommand{\listingscaption}{Листинг}
+	\renewcommand{\figurename}{Рисунок}%
+	\renewcommand{\partname}{Глава}
+	\renewcommand{\contentsname}{\centerline{Содержание}}
+	\renewcommand{\listingscaption}{Листинг}
 }
 
 % основной шрифт документа
@@ -25,13 +25,13 @@
 \geometry{bindingoffset=0cm}
 
 % настройка ссылок и метаданных документа
-\hypersetup{unicode=true,colorlinks=true,linkcolor=red,citecolor=green,filecolor=magenta,urlcolor=cyan,        		       
-    pdftitle={\docname},   	    
-    pdfauthor={\studentname},      
-    pdfsubject={\subject},      		        
-    pdfcreator={\studentname}, 	       
-    pdfproducer={Overleaf}, 		     
-    pdfkeywords={\subject}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=red,citecolor=green,filecolor=magenta,urlcolor=cyan,
+	pdftitle={\docname},
+	pdfauthor={\studentname},
+	pdfsubject={\subject},
+	pdfcreator={\studentname},
+	pdfproducer={Overleaf},
+	pdfkeywords={\subject}
 }
 
 % настройка подсветки кода и окружения для листингов
@@ -40,9 +40,9 @@
 
 % шрифт для листингов с лигатурами
 \setmonofont{FiraCode-Regular.otf}[
-    SizeFeatures={Size=10},
-    Path = templates/,
-    Contextuals=Alternate
+	SizeFeatures={Size=10},
+	Path = templates/,
+	Contextuals=Alternate
 ]
 
 % оформления подписи рисунка
@@ -58,7 +58,7 @@
 % Внесение titlepage в учёт счётчика страниц
 \makeatletter
 \renewenvironment{titlepage} {
- \thispagestyle{empty}
+	\thispagestyle{empty}
 }
 \makeatother
 
@@ -85,4 +85,4 @@
 \DeclareMathOperator{\sgn}{\mathop{sgn}}
 
 % перенос знаков в формулах (по Львовскому)
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{} {\hbox{$\mathsurround=0pt #1$}}{}} 
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{} {\hbox{$\mathsurround=0pt #1$}}{}}
