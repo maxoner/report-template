@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kr}{module} \PYG{n+nn}{DFA}
+\PYG{p}{(} \PYG{k+kt}{DFA} \PYG{p}{(}\PYG{o}{..}\PYG{p}{)}
+\PYG{p}{,} \PYG{n+nf}{trans}
+\PYG{p}{,} \PYG{n+nf}{run}
+\PYG{p}{,} \PYG{n+nf}{accept}
+\PYG{p}{)} \PYG{k+kr}{where}
+
+\PYG{k+kr}{import} \PYG{k}{qualified} \PYG{n+nn}{Data.Map} \PYG{k}{as} \PYG{n}{Map}
+\PYG{k+kr}{import} \PYG{k}{qualified} \PYG{n+nn}{Data.Set} \PYG{k}{as} \PYG{n}{Set}
+\PYG{k+kr}{import} \PYG{n+nn}{Data.Maybe}
+\PYG{k+kr}{import} \PYG{n+nn}{Control.Monad}
+
+\PYG{k+kr}{type} \PYG{k+kt}{Delta} \PYG{n}{s} \PYG{n}{a} \PYG{o+ow}{=} \PYG{k+kt}{Map}\PYG{o}{.}\PYG{k+kt}{Map} \PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{a}\PYG{p}{)} \PYG{n}{s}
+
+\PYG{k+kr}{data} \PYG{k+kt}{DFA} \PYG{n}{s} \PYG{n}{a} \PYG{o+ow}{=} \PYG{k+kt}{DFA}
+    \PYG{p}{\PYGZob{}} \PYG{n}{states} \PYG{o+ow}{::} \PYG{k+kt}{Set}\PYG{o}{.}\PYG{k+kt}{Set} \PYG{n}{s}
+    \PYG{p}{,} \PYG{n}{sigma} \PYG{o+ow}{::} \PYG{k+kt}{Set}\PYG{o}{.}\PYG{k+kt}{Set} \PYG{n}{a}
+    \PYG{p}{,} \PYG{n}{delta} \PYG{o+ow}{::} \PYG{k+kt}{Delta} \PYG{n}{s} \PYG{n}{a}
+    \PYG{p}{,} \PYG{n}{startState} \PYG{o+ow}{::} \PYG{n}{s}
+    \PYG{p}{,} \PYG{n}{acceptStates} \PYG{o+ow}{::} \PYG{k+kt}{Set}\PYG{o}{.}\PYG{k+kt}{Set} \PYG{n}{s}
+    \PYG{p}{\PYGZcb{}} \PYG{k+kr}{deriving} \PYG{p}{(}\PYG{k+kt}{Show}\PYG{p}{)}
+
+\PYG{n+nf}{trans} \PYG{o+ow}{::} \PYG{p}{(}\PYG{k+kt}{Ord} \PYG{n}{s}\PYG{p}{,} \PYG{k+kt}{Ord} \PYG{n}{a}\PYG{p}{)} \PYG{o+ow}{=\PYGZgt{}} \PYG{n}{s} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{n}{a} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{DFA} \PYG{n}{s} \PYG{n}{a} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Maybe} \PYG{n}{s}
+\PYG{n+nf}{trans} \PYG{n}{state} \PYG{n}{alpha} \PYG{n}{dfa} \PYG{o+ow}{=} \PYG{k+kt}{Map}\PYG{o}{.}\PYG{n}{lookup} \PYG{p}{(}\PYG{n}{state}\PYG{p}{,} \PYG{n}{alpha}\PYG{p}{)} \PYG{o}{\PYGZdl{}} \PYG{n}{delta} \PYG{n}{dfa}
+
+\PYG{n+nf}{run} \PYG{o+ow}{::} \PYG{p}{(}\PYG{k+kt}{Ord} \PYG{n}{s}\PYG{p}{,} \PYG{k+kt}{Ord} \PYG{n}{a}\PYG{p}{)} \PYG{o+ow}{=\PYGZgt{}} \PYG{p}{[}\PYG{n}{a}\PYG{p}{]} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{DFA} \PYG{n}{s} \PYG{n}{a} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Maybe} \PYG{n}{s}
+\PYG{n+nf}{run} \PYG{n}{input} \PYG{n}{dfa} \PYG{o+ow}{=} \PYG{p}{(}\PYG{n}{foldM} \PYG{n}{trans\PYGZsq{}} \PYG{o}{\PYGZdl{}} \PYG{n}{startState} \PYG{n}{dfa}\PYG{p}{)} \PYG{n}{input}
+    \PYG{k+kr}{where} \PYG{n}{trans\PYGZsq{}} \PYG{n}{state} \PYG{n}{alpha} \PYG{o+ow}{=} \PYG{n}{trans} \PYG{n}{state} \PYG{n}{alpha} \PYG{n}{dfa}
+
+\PYG{n+nf}{accept} \PYG{o+ow}{::} \PYG{p}{(}\PYG{k+kt}{Ord} \PYG{n}{s}\PYG{p}{,} \PYG{k+kt}{Ord} \PYG{n}{a}\PYG{p}{)} \PYG{o+ow}{=\PYGZgt{}} \PYG{p}{[}\PYG{n}{a}\PYG{p}{]} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{DFA} \PYG{n}{s} \PYG{n}{a} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Bool}
+\PYG{n+nf}{accept} \PYG{n}{input} \PYG{n}{dfa} \PYG{o+ow}{=}
+    \PYG{k+kr}{if} \PYG{n}{isNothing} \PYG{o}{\PYGZdl{}} \PYG{n}{final}
+        \PYG{k+kr}{then} \PYG{k+kt}{False}
+        \PYG{k+kr}{else} \PYG{k+kt}{Set}\PYG{o}{.}\PYG{n}{member} \PYG{p}{(}\PYG{n}{fromJust} \PYG{n}{final}\PYG{p}{)} \PYG{p}{(}\PYG{n}{acceptStates} \PYG{n}{dfa}\PYG{p}{)}
+    \PYG{k+kr}{where} \PYG{n}{final} \PYG{o+ow}{=} \PYG{n}{run} \PYG{n}{input} \PYG{n}{dfa}
+\end{Verbatim}

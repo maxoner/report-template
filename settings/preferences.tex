@@ -11,8 +11,8 @@
 }
 
 % основной шрифт документа
-\setmainfont{CMU Serif}
-\newfontfamily\cyrillicfont{CMU Serif}[Script=Cyrillic]
+\setmainfont{Liberation Serif}
+\newfontfamily\cyrillicfont{Liberation Serif}[Script=Cyrillic]
 
 % перечень использованных источников
 \addbibresource{refs.bib}
@@ -25,7 +25,7 @@
 \geometry{bindingoffset=0cm}
 
 % настройка ссылок и метаданных документа
-\hypersetup{unicode=true,colorlinks=true,linkcolor=red,citecolor=green,filecolor=magenta,urlcolor=cyan,
+\hypersetup{unicode=true,colorlinks=true,linkcolor=blue,citecolor=green,filecolor=magenta,urlcolor=cyan,
 	pdftitle={\docname},
 	pdfauthor={\studentname},
 	pdfsubject={\subject},
@@ -49,8 +49,8 @@
 \captionsetup[figure]{labelsep = period}
 
 % подпись таблицы
-\DeclareCaptionFormat{hfillstart}{\hfill#1#2#3\par}
-\captionsetup[table]{format=hfillstart,labelsep=newline,justification=centering,skip=-10pt,textfont=bf}
+% \DeclareCaptionFormat{hfillstart}{\hfill#1#2#3\par}
+% \captionsetup[table]{format=hfillstart,labelsep=newline,justification=centering,skip=-10pt,textfont=bf}
 
 % путь к каталогу с рисунками
 \graphicspath{{fig/}}

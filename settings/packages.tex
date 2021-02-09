@@ -1,7 +1,6 @@
 % настройка кодировки, шрифтов и русского языка
 \usepackage{fontspec}
 \usepackage{polyglossia}
-
 % рабочие ссылки в документе
 \usepackage{hyperref}
 
@@ -39,11 +38,13 @@
 
 % для заголовков
 \usepackage{caption}
+\captionsetup[table]{position=top}
 \usepackage{titlesec}
 \usepackage[dotinlabels]{titletoc}
 
 % разное для математики
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
-
+\usepackage{amsmath, amsfonts,amsthm, mathtools}
+%amssymb
+\usepackage{unicode-math}
 % водяной знак на документе, см. main.tex
 \usepackage[printwatermark]{xwatermark}
