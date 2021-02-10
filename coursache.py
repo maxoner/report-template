@@ -2,6 +2,7 @@ import jinja2
 from jinja2 import Template
 import os
 import sys
+import re
 
 
 
@@ -114,5 +115,12 @@ def main():
         else:
             break
 
+
+#----------------------------------------------
+
+template = re.compile('\[\[[A-Z]+\d+\]\]')
+def replace_tokens(file_name):
+
+
 if __name__ == "__main__":
-    main()
+    replace_tokens(sys.argv[1])
