@@ -7,6 +7,26 @@ import sys
 """
 
 
+def tex_exp(*a, after_comma=3):
+    """
+    принимает число, возвращает tex-код для экспоненциальной записи числа
+    """
+    container = []
+    for i in range(len(a)):
+        fmt = f'%.0{after_comma}e'
+        ae = str(fmt%a[i])
+        ae = ae.split('e')
+        if ae[1][0] == '+':
+            ae[1] = ae[1][1:]
+        if ae[1][0] == '0':
+            ae[1] = ae[1][1:]
+        if not int(ae[1]):
+            container.append(fr'{ae[0]} ')
+        else:
+            container.append(fr'{ae[0]} \cdot 10^{{ { ae[1] } }}')
+    return tuple(container)
+
+
 template = re.compile('\[\[[A-Z]+\d+\]\]')
 def replace_tokens(file_name, xls_name):
     with open(file_name, 'r') as f:
@@ -22,7 +42,8 @@ def replace_tokens(file_name, xls_name):
 
 def get_val_from_xls(xls, cell):
     db = xl.readxl(fn='./Курсач.xlsx')
-    db.ws(ws='Sheet1').address(address=cell[2:-2])
+    val = tex_exp(db.ws(ws='Sheet1').address(address=cell[2:-2]))
+    return val
     #получения значения по номеру ячейки. 
     pass
 
