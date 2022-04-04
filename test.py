@@ -105,9 +105,11 @@ def wspHSST(t: ct.c_double) -> ct.c_double:
     pass
 
 
+
 @make_wsp_func
 def wspHPS(p: ct.c_double, t: ct.c_double) -> ct.c_double:
     pass
+
 
 
 @make_wsp_func
@@ -115,11 +117,38 @@ def wspSPT(p: ct.c_double, t: ct.c_double) -> ct.c_double:
     pass
 
 
+
 @make_wsp_func
 def wspHPT(p: ct.c_double, t: ct.c_double) -> ct.c_double:
     pass
 
 
+
 @make_wsp_func
 def wspXPS(p: ct.c_double, t: ct.c_double) -> ct.c_double:
+    pass
+
+
+@make_wsp_func
+def wspSPTX(p: ct.c_double, t: ct.c_double, x: ct.c_double) -> ct.c_double:
+    pass
+
+
+@make_wsp_func
+def wspTPX(p: ct.c_double, t: ct.c_double) -> ct.c_double:
+    pass
+
+
+@make_wsp_func
+def wspSPX(p: ct.c_double, t: ct.c_double) -> ct.c_double:
+    pass
+
+
+@make_wsp_func
+def wspSSTX(t: ct.c_double, x: ct.c_double) -> ct.c_double:
+    pass
+
+
+@make_wsp_func
+def wspHSTX(t: ct.c_double, x: ct.c_double) -> ct.c_double:
     pass
