@@ -202,7 +202,7 @@
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[]{TS.png}
+		\includegraphics[scale=0.17]{TS.png}
 		\caption{ T­S диаграмма турбинного цикла в реакторе ВВЭР­-1000 : hbc — нагрев и испарение в парогенераторе; cd — расширение пара в ЦВД; de — пар отделяется от конденсата в сепараторе; ef — пар поступает в промежуточный пароперегреватель; fk — расширение пара в ЦНД; ka — конденсация в конден­саторе; ag — регенеративный подогрев в ПНД; gh — регенеративный подогрев в ПВД;
         }
 		\label{pic:TS} % название для ссылок внутри кода
@@ -227,13 +227,13 @@
          \hline
           e & 0.98 & 179.189 & 6591.7 & 2776.4 \\ 
          \hline
-          f & 0.98 & 250  & 7199.86 & 2943.61 \\ 
+          f & 0.98 & 250  & 6936.1 & 2943.61 \\ 
          \hline
-          k & 0.004 & 30.5 & 7199.86 & 2178.6 \\ 
+          k & 0.004 & 28.7 & 6936.1 & 2099.5 \\ 
          \hline
-          k′ & 0.004 & 30.5 & 442.236 & 127.396 \\ 
+          k′ & 0.004 & 28.7 & 416.66 & 119.656 \\ 
          \hline
-          a & 5.9  & 30.5 & 440.4 & 132.8 \\ 
+          a & 5.9  & 28.7 & 414.9 & 125.1 \\ 
          \hline
           g & 0.98 & 179.2 & 2130.2 & 758.9 \\ 
          \bottomrule
@@ -251,11 +251,11 @@
 \begin{equation}
 \eta_{t0} = 
 1 - 
-\frac{3.035 \cdot 10^{ 2 } ⋅ \left( 7.200 \cdot 10^{ 3 } - 4.404 \cdot 10^{ 2 } \right) ⋅ 8.445 \cdot 10^{ -01 }}
-{\left( 2.786 \cdot 10^{ 6 } - 7.589 \cdot 10^{ 5 } \right) + 8.445 \cdot 10^{ -01 } \left( \left( 7.589 \cdot 10^{ 5 } - 1.328 \cdot 10^{ 5 } \right) + \left( 2.944 \cdot 10^{ 6 } - 2.776 \cdot 10^{ 6 } \right) \right)}
+\frac{3.017 \cdot 10^{ 2 } ⋅ \left( 6.936 \cdot 10^{ 3 } - 4.149 \cdot 10^{ 2 } \right) ⋅ 8.445 \cdot 10^{ -01 }}
+{\left( 2.786 \cdot 10^{ 6 } - 7.589 \cdot 10^{ 5 } \right) + 8.445 \cdot 10^{ -01 } \left( \left( 7.589 \cdot 10^{ 5 } - 1.250 \cdot 10^{ 5 } \right) + \left( 2.944 \cdot 10^{ 6 } - 2.776 \cdot 10^{ 6 } \right) \right)}
 \end{equation}
 \begin{equation}
-\eta_{t0}=3.575 \cdot 10^{ -01 }
+\eta_{t0}=3.854 \cdot 10^{ -01 }
 \end{equation}
 
 Термический КПД с идеальной регенерацией:
@@ -268,19 +268,19 @@
 \begin{equation}
 η_{t∞}=
 1 -
-\frac{3.035 \cdot 10^{ 2 } ⋅ \left( 7.200 \cdot 10^{ 3 } - 2.130 \cdot 10^{ 3 } \right) \left( 5.898 \cdot 10^{ 3 } - 2.516 \cdot 10^{ 3 } \right)}
+\frac{3.017 \cdot 10^{ 2 } ⋅ \left( 6.936 \cdot 10^{ 3 } - 2.130 \cdot 10^{ 3 } \right) \left( 5.898 \cdot 10^{ 3 } - 2.516 \cdot 10^{ 3 } \right)}
 {\left(2.786 \cdot 10^{ 6 }) - 9.429 \cdot 10^{ 5 }\right) ⋅ \left( 6.592 \cdot 10^{ 3 } - 2.130 \cdot 10^{ 3 } \right) + \left( 2.944 \cdot 10^{ 6 } - 2.776 \cdot 10^{ 6 } \right) ⋅ \left( 5.898 \cdot 10^{ 3 } - 2.516 \cdot 10^{ 3 } \right)}
 \end{equation}
 \begin{equation}
-η_{t∞}=4.078 \cdot 10^{ -01 }
+η_{t∞}=4.420 \cdot 10^{ -01 }
 \end{equation}
 
 Термический КПД с $n = 7$  регенеративными отборами:
 \begin{equation}
 η_{tn} = η_{t0} + \left( η_{t∞} - η_{t0} \right) ⋅ \frac{n}{n+1}
 =
-3.575 \cdot 10^{ -01 } + \left( 4.078 \cdot 10^{ -01 } - 3.575 \cdot 10^{ -01 } \right) \cdot \frac{7}{8}
-=4.015 \cdot 10^{ -01 }
+3.854 \cdot 10^{ -01 } + \left( 4.420 \cdot 10^{ -01 } - 3.854 \cdot 10^{ -01 } \right) \cdot \frac{7}{8}
+=4.349 \cdot 10^{ -01 }
 \end{equation}
 
 Учитываем:
@@ -291,11 +291,11 @@ $\eta_{\text{мех}}$ = 0.97 — КПД механический,
 Вычисляем КПД брутто АЭС как:
 $$
 \eta_{\text{брутто}} = \eta^7 \cdot \eta^{\text{вн}} \cdot \eta_{\text{ос}} \cdot \eta_{\text{эг}} \cdot \eta_{\text{мех}} = 0.335
-=4.015 \cdot 10^{ -01 } \cdot 0.85 \cdot 0.98 \cdot 0.98 \cdot 0.97=3.179 \cdot 10^{ -01 }
+=4.349 \cdot 10^{ -01 } \cdot 0.85 \cdot 0.98 \cdot 0.98 \cdot 0.97=3.444 \cdot 10^{ -01 }
 $$
 Тепловая мощность реактора при номинальной электрической мощности $Q_{\text{эл}} = 1000$ МВт равна:
 $$
-Q_{\text{теп}} = \frac{Q_{\text{эл}}}{\eta_{\text{брутто}}}=\frac{ 1.000 \cdot 10^{ 9 } } { 3.179 \cdot 10^{ -01 } } = 3.146 \cdot 10^{ 3 } \text{МВт}
+Q_{\text{теп}} = \frac{Q_{\text{эл}}}{\eta_{\text{брутто}}}=\frac{ 1.000 \cdot 10^{ 9 } } { 3.444 \cdot 10^{ -01 } } = 2.904 \cdot 10^{ 3 } \text{МВт}
 $$
 
 
@@ -308,13 +308,13 @@ $$
 q_{max} = \frac {Q_{\text{теп}}K_r K_z}{N_{\text{ТВС}}N_{\text{твэл}}H_{\text{аз}}}  
 =
 \frac 
-{ 3.146 \cdot 10^{ 9 } \cdot 1.25 \cdot 1.5  }
+{ 2.904 \cdot 10^{ 9 } \cdot 1.25 \cdot 1.5  }
 { 163 \cdot 317 \cdot 3.5 }
-=3.261 \cdot 10^{ 2 } \frac {\text{Вт}} {\text{см}}
+=3.010 \cdot 10^{ 2 } \frac {\text{Вт}} {\text{см}}
 \end{equation}
 Зависимость величины теплового потока от высоты:
 $$
-q(z) = q_{max}\cos\left(\frac {\pi\cdot z} {H_{\text{эф}}}\right) = 3.261 \cdot 10^{ 2 }\cos \left(\frac {\pi \cdot z} {3.715} \right)\ \left[\frac{\text{Вт}}{\text{см}} \right]
+q(z) = q_{max}\cos\left(\frac {\pi\cdot z} {H_{\text{эф}}}\right) = 3.010 \cdot 10^{ 2 }\cos \left(\frac {\pi \cdot z} {3.715} \right)\ \left[\frac{\text{Вт}}{\text{см}} \right]
 $$
 
 \subsection{Расчет распределения температуры теплоносителя по высоте}
@@ -327,13 +327,13 @@ $$
 $$
 G_{\text{ТВС}} = \frac {Q_{\text{теп}}} {(h_{\text{вых}} - h_{\text{вх}})N_{\text{ТВС}}}
 =
-\frac { 3.146 \cdot 10^{ 9 } } { ( 1.452 \cdot 10^{ 6 } - 1.268 \cdot 10^{ 6 }) \cdot 163 } = 1.049 \cdot 10^{ 2 } \ \frac {\text{кг}}{\text{c}}
+\frac { 2.904 \cdot 10^{ 9 } } { ( 1.452 \cdot 10^{ 6 } - 1.268 \cdot 10^{ 6 }) \cdot 163 } = 9.685 \cdot 10^{ 1 } \ \frac {\text{кг}}{\text{c}}
 $$
 Расход теплоносителя через реактор:
 $$
 G_{\text{реак}} = \frac {Q_{\text{теп}}} {(h_{\text{вых}} - h_{\text{вх}})}
 =
-\frac { 3.146 \cdot 10^{ 9 } } { ( 1.452 \cdot 10^{ 6 } - 1.268 \cdot 10^{ 6 }) } = 1.710 \cdot 10^{ 4 } \ \frac {\text{кг}}{\text{c}}
+\frac { 2.904 \cdot 10^{ 9 } } { ( 1.452 \cdot 10^{ 6 } - 1.268 \cdot 10^{ 6 }) } = 1.579 \cdot 10^{ 4 } \ \frac {\text{кг}}{\text{c}}
 $$
 Средняя теплоемкость воды:
 $$
@@ -367,7 +367,7 @@ S_{\text{прох}} = \sqrt{3}/2(a - 2 \cdot \delta_{\text{чехла}})^2 - N_{
 S_{\text{прох}} =\sqrt{3}/2(2.340 \cdot 10^{ -01 } - 2 \cdot 0.0015)^2 - 3.170 \cdot 10^{ 2 } \frac { \pi (9.100 \cdot 10^{ -03 })^2 } {4} - 1.200 \cdot 10^{ 1 } \frac { \pi (1.260 \cdot 10^{ -02 }))^2} {4} - \frac { (1.030 \cdot 10^{ -02 })^2\pi } {4} 
 \end{equation}
 \begin{equation}
-S_{\text{прох}} = 2.402 \cdot 10^{ 4 } \text{мм}^2
+S_{\text{прох}} =  2.402 \cdot 10^{ 4 } \text{мм}^2
 \end{equation}
 
 Периметр:
@@ -401,46 +401,46 @@ $$
 
 Число Рейнолдса:
 $$
-\operatorname{Re}=\frac{G_{\text {реак }} \cdot d_{\mathrm{r}}}{N_{\mathrm{TBC}} \cdot S_{\text {npox }} \cdot \mu} = 4.640 \cdot 10^{ 5 }
+\operatorname{Re}=\frac{G_{\text {реак }} \cdot d_{\mathrm{r}}}{N_{\mathrm{TBC}} \cdot S_{\text {npox }} \cdot \mu} = 4.283 \cdot 10^{ 5 }
 $$
 Коэффициент гидравлического сопротивления:
 $$
-\xi_{\text{тр}}=(1,82 \cdot \log (\mathrm{Re})-1.64)^{-2}= 1.329 \cdot 10^{-02}
+\xi_{\text{тр}}=(1,82 \cdot \log (\mathrm{Re})-1.64)^{-2}= 1.35 \cdot 10^{-02}
 $$
 Расчитываем число Нуссельта:
 \begin{align*}
 \mathrm{Nu}=&\frac{\frac{\xi}{8} \cdot \mathrm{Re} \cdot \operatorname{Pr}}{k+12.7 \cdot\left(\operatorname{Pr}^{\frac{2}{3}}-1\right) \cdot \sqrt{\frac{\xi}{8}}}
 =\\=&
 \frac{ 
-    \frac{1.329 \cdot 10^{ -02 }}{8} \cdot 4.640 \cdot 10^{ 5 } \cdot 8.729 \cdot 10^{ -01 } 
+    \frac{1.349 \cdot 10^{ -02 }}{8} \cdot 4.283 \cdot 10^{ 5 } \cdot 8.729 \cdot 10^{ -01 } 
 }
 { 
-    1 + \frac{900}{4.640 \cdot 10^{ 5 }} + 12.7 \cdot\left((8.729 \cdot 10^{ -01 })^{\frac{2}{3}}-1\right) \cdot \sqrt{\frac{1.329 \cdot 10^{ -02 }}{8}} 
-} = 7.033 \cdot 10^{ 2 } 
+    1 + \frac{900}{4.283 \cdot 10^{ 5 }} + 12.7 \cdot\left((8.729 \cdot 10^{ -01 })^{\frac{2}{3}}-1\right) \cdot \sqrt{\frac{1.349 \cdot 10^{ -02 }}{8}} 
+} = 6.589 \cdot 10^{ 2 }
 \end{align*}, где $k = 1 + \frac{900}{Re}$  \\
 Коэффициент теплоотдачи:
     $$
-    \alpha_1 = \frac {Nu \cdot \lambda} {d_\text{г}} = \frac {7.033 \cdot 10^{ 2 } \cdot 5.536 \cdot 10^{ -01 }}{9.263 \cdot 10^{ -03 }} = 4.203 \cdot 10^{ 4 } \frac {\text{Вт}}{\text{м}^2\cdot\mathrm{K}}
+    \alpha_1 = \frac {Nu \cdot \lambda} {d_\text{г}} = \frac {6.589 \cdot 10^{ 2 } \cdot 5.536 \cdot 10^{ -01 }}{9.263 \cdot 10^{ -03 }} = 3.938 \cdot 10^{ 4 } \frac {\text{Вт}}{\text{м}^2\cdot\mathrm{K}}
     $$
 По формуле Диттуса-Болтера:
     $$
-    Nu = 0.023Re^{0.8}Pr^{0.4} = 743.6
+    Nu = 0.023Re^{0.8}Pr^{0.4} = 697.5
     $$
 Коэффициент теплоотдачи:
     $$
-    \alpha_2 = \frac {Nu \cdot \lambda} {d_\text{г}} = \frac {7.436 \cdot 10^{ 2 } \cdot 5.536 \cdot 10^{ -01 }}{9.263 \cdot 10^{ -03 }} = 4.444 \cdot 10^{ 4 } \frac {\text{Вт}}{\text{м}^2\cdot\mathrm{K}}
+    \alpha_2 = \frac {Nu \cdot \lambda} {d_\text{г}} = \frac {6.975 \cdot 10^{ 2 } \cdot 5.536 \cdot 10^{ -01 }}{9.263 \cdot 10^{ -03 }} = 4.169 \cdot 10^{ 4 } \frac {\text{Вт}}{\text{м}^2\cdot\mathrm{K}}
     $$
 По формула М.А. Михеева:
     $$
-    Nu = 0.021Re^{0.8}Pr^{0.43} = 676.2
+    Nu = 0.021Re^{0.8}Pr^{0.43} = 634.28
     $$
 Коэффициент теплоотдачи:
     $$
-    \alpha_3 = \frac {Nu \cdot \lambda} {d_\text{г}} = \frac {6.762 \cdot 10^{ 2 } \cdot 5.536 \cdot 10^{ -01 }}{9.263 \cdot 10^{ -03 }} = 4.041 \cdot 10^{ 4 } \frac {\text{Вт}}{\text{м}^2\cdot\mathrm{K}}
+    \alpha_3 = \frac {Nu \cdot \lambda} {d_\text{г}} = \frac {6.343 \cdot 10^{ 2 } \cdot 5.536 \cdot 10^{ -01 }}{9.263 \cdot 10^{ -03 }} = 3.791 \cdot 10^{ 4 } \frac {\text{Вт}}{\text{м}^2\cdot\mathrm{K}}
     $$
 Усредним коэффициент теплоотдачи:
     $$
-    \alpha = \frac {\alpha_1 + \alpha_2 + \alpha_3} {3} = 4.229 \cdot 10^{ 4 } \frac{\text{Вт}}{\text{м}^2 \cdot K}
+    \alpha = \frac {\alpha_1 + \alpha_2 + \alpha_3} {3} = 3.966 \cdot 10^{ 4 } \frac{\text{Вт}}{\text{м}^2 \cdot K}
     $$
 Распределение температуры внешней стенки твэла по высоте реактора:
     $$
@@ -458,7 +458,7 @@ $$
 \end{figure}
 
  Из \ref{pic:Tob} 
- видно, что максимальная температура $T_{\text{об}}^{\max} = 341.9 ^\circ C $ стенки достигается в $Z_{\max} = 0.8 м$. Отсюда можно сделать вывод о том, что также отсутствует поверхностное кипения теплоносителя.
+ видно, что максимальная температура $T_{\text{об}}^{\max} = 341.6 ^\circ C $ стенки достигается в $Z_{\max} = 0.8 м$. Отсюда можно сделать вывод о том, что также отсутствует поверхностное кипения теплоносителя.
  %максимальная температура оболочки в условиях нормальной эксплуатации определяется прочностными и пластическими свойствами сплава и составляет сколь-кот то из справочника
 
 Общий график для распределений теплоносителя и оболочки представлены на \ref{pic:obsh}
@@ -509,60 +509,57 @@ $$
 Для того чтобы определить мощность на прокачку теплоносителя через реактор, найде перепад давления в ТВС
 \noindent Гидравлическое сопротивление трения по формуле Дарси:
 $$
-\Delta P_{\text{тр}}=\xi_{\text{тр}}\cdot\frac{H_{\text{аз}}}{d_{\text{г}}}\cdot \frac {w^2}{2}\rho_{\text{ср}}
+\Delta P_{\text{тр}}=\xi_{\text{тр}}\cdot\frac{H_{\text{аз}}}{d_{\text{г}}}\cdot \frac {w^2}{2}\rho
 =
-1.329 \cdot 10^{ -02 } \frac {3.500 } {9.263 \cdot 10^{ -03 }} \cdot \frac {(5.600 )^2} {2} \cdot 7.200 \cdot 10^{ 2 }
-=5.671 \cdot 10^{ 4 } \text{Па}
+1.349 \cdot 10^{ -02 } \frac {3.500 } {9.263 \cdot 10^{ -03 }} \cdot \frac {(5.629 )^2} {2} \cdot 7.165 \cdot 10^{ 2 }
+=5.785 \cdot 10^{ 4 } \text{Па}
 $$
 где 
 \begin{itemize}
-\item $w = 5.6 \frac{\text{м}}{\text{с}}$ — средняя скорость теплоносителя
-\item $\rho_{\text{ср}} = 720 \text{Па}$ — средняя плотность среды
+\item $w$, средняя скорость теплоносителя: \begin{equation}w = \frac{G_{\text{реак}}}{\rho_{\text{ср}} \cdot S_{\text{прох}} \cdot N_{\text{ТВС}}}= \frac {1.579 \cdot 10^{ 4 }} {7.165 \cdot 10^{ 2 } \cdot 2.402 \cdot 10^{ -02 } \cdot 1.630 \cdot 10^{ 2 }} = 5.629 \ \text{м} /\text{c}\end{equation}
+\item $\rho_{\text{ср}} = 720\ \text{Па}$ — средняя плотность среды
 \end{itemize}
 
 \noindent Потеря напора на ускорение:
 \begin{equation}
 \Delta P_{\mathrm{уск}} = \left( \frac{G_{\text{реак}}}{N_{\mathrm{TBC}} \cdot S_{\mathrm{npox}}} \right)^{2} \cdot \left(\frac{1}{\rho_{\mathrm{вых}}} - \frac{1}{\rho_{\mathrm{вx}}} \right)
-= 
-\left( \frac{ 1.710 \cdot 10^{ 4 } } { 1.630 \cdot 10^{ 2 } \cdot 2.402 \cdot 10^{ -02 } } \right)^2 \cdot \left(\frac 1 { 6.808 \cdot 10^{ 2 } } - \frac 1  { 7.521 \cdot 10^{ 2 } } \right) =  2.658 \cdot 10^{ 3 } \text{Па}
+=
+\left( \frac{ 1.579 \cdot 10^{ 4 } } { 1.630 \cdot 10^{ 2 } \cdot 2.402 \cdot 10^{ -02 } } \right)^2 \cdot \left(\frac 1 { 6.808 \cdot 10^{ 2 } } - \frac 1  { 7.521 \cdot 10^{ 2 } } \right) =  2.265 \cdot 10^{ 3 } \text{Па}
 \end{equation}, где $\rho_{\text{вых}} = 680.8\ \frac{\text{кг}}{\text{м}^2} $, $\rho_{\text{вх}} =752.1\  \frac {\text{кг}}{\text{м}^2}$.
 \newline
 \noindent Нивелирный напор:
 $$
 \Delta P_{\text{нив}} = \rho_{\text{ср}} \cdot g \cdot H_{\text{аз}}
 =
-7.200 \cdot 10^{ 2 } \cdot 9.807 \cdot 3.500  = 2.471 \cdot 10^{ 4 } \text{Па}
+7.165 \cdot 10^{ 2 } \cdot 9.807 \cdot 3.500  = 2.459 \cdot 10^{ 4 } \text{Па}
 $$
 Местное сопротивление:
 $$
-\Delta P_{\mathrm{мест}} = \frac{ \left( \frac{G}{N_{\mathrm{TBC}} \cdot S_{\mathrm{прох}}} \right)^{2} }{2} \cdot \left( \frac{\xi_{\mathrm{вх}}}{\rho_{\mathrm{вх}}}+\frac{13 \xi_{\mathrm{реш}}}{\rho_{\mathrm{ср}}}+\frac{ \xi_{\mathrm{вых}}}{\rho_{\mathrm{вых}}} \right)
+\Delta P_{\text{мест}} = \frac{ \left( \frac{1.579 \cdot 10^{ 4 }} {163 \cdot 2.402 \cdot 10^{ -02 } }  \right)^2 } {2} \cdot \left( \frac{ 2.6 }{ 7.521 \cdot 10^{ 2 } } +\frac{ 13 \cdot 0.45 }{7.165 \cdot 10^{ 2 }}+\frac{0.26} { 6.808 \cdot 10^{ 2 } } \right) = 9.761 \cdot 10^{ 4 } \text{Па}
 $$
-\[
-    \Delta P_{\text{мест}} = \frac{ \left( \frac{1.710 \cdot 10^{ 4 }} {163 \cdot 2.402 \cdot 10^{ -02 } }  \right)^2 } {2} \cdot \left( \frac{ 2.6 }{ 7.521 \cdot 10^{ 2 } } +\frac{ 13 \cdot 0.45 }{7.200 \cdot 10^{ 2 }}+\frac{0.26} { 6.808 \cdot 10^{ 2 } } \right) = 1.142 \cdot 10^{ 5 } \text{Па}
-\]
 где $\xi_{\text{вх}}= 2.6 $ — коэффициент сопротивления на входе в кассету; $\xi_{\text{вых}} = 0.26$ — коэффициент сопротивления на выходе из кассеты, $\xi_{\text{реш}} = 0.45$ — коэффициент сопротивления при проходе через дистанцирующую решетку %укажи количество дистанцирующих решеток
 Общее сопротивление каналов:
 $$
-\Delta P=\Delta P_{\mathrm{тр}}+\Delta P_{\mathrm{уск}}+\Delta P_{\text { нив }}+\Delta P_{\text {мест }} = 1.983 \cdot 10^{ 5 } \text{Па} 
+\Delta P=\Delta P_{\mathrm{тр}}+\Delta P_{\mathrm{уск}}+\Delta P_{\text { нив }}+\Delta P_{\text {мест }} = 1.823 \cdot 10^{ 5 } \text{Па} 
 $$
 Мощность, необходимая для прокачки теплоносителя через весь реактор:
 $$
 N_{\mathrm{пр}}=N_{\mathrm{ТВС}} \frac{\Delta P \cdot G_{\mathrm{TBC}}}{\eta_{\text {нас }} \cdot \rho_{\mathrm{вх}}}
 $$, где $\eta_{\text{нас}}=0.8$ — КПД насоса
 \[
-  N_{\text{пр}} = 163 \cdot \frac {1.983 \cdot 10^{ 5 } \cdot 1.049 \cdot 10^{ 2 }} {0.8 \cdot 7.521 \cdot 10^{ 2 }} = 5.635 \cdot 10^{ 6 } \text{Вт}  
+    N_{\text{пр}} = 163 \cdot \frac {1.823 \cdot 10^{ 5 } \cdot 9.685 \cdot 10^{ 1 }} {0.8 \cdot 7.521 \cdot 10^{ 2 }} = 4.783 \cdot 10^{ 6 } \text{Вт}
 \]
 \noindent КПД реактора с учетом потерь на прокачку теплоносителя:
 $$
-\eta^{\prime}=\frac{Q_{\text {эл }}-N_{\text {пр }}}{Q_{\text {теп }}} = \frac{1.000 \cdot 10^{ 9 } - 5.635 \cdot 10^{ 6 }}{3.146 \cdot 10^{ 9 }}={3.161 \cdot 10^{ -01 }}
+\eta^{\prime} = \frac{1.000 \cdot 10^{ 9 } - 4.783 \cdot 10^{ 6 }}{2.904 \cdot 10^{ 9 }}={3.427 \cdot 10^{ -01 }}
 $$
 % \subsection{Определение запаса до кризиса теплообмена}
 \subsection{Выводы из теплофизического расчета}
 По итогам теплогидравлического расчета были определены основные термодинамические и теплогидравлические параметры РУ ВВЭР-1000. Были выполнены следующие поставленные задачи:
 \begin{enumerate}
-   \item Произведен выбор турбины и определён её КПД равный 0.316 с учетом мощности, необходимой на прокачку теплоносителя.
-   \item Были найдены зависимости температуры оболочки и теплоносителя от высоты АЗ, было выяснено, что поверхностного кипения не наблюдается, и максимальная тепература оболочки твэла 341.9 $^\circ C$ не превышает предельно допустимую.
-   \item Определена зависимость температуры топлива от высоты АЗ, максимальная температура топлива $1559 ^\circ C$ не превышает предельное значение $1900 ^\circ C$.
+   \item Произведен выбор турбины и определён её КПД равный 0.342 с учетом мощности, необходимой на прокачку теплоносителя.
+   \item Были найдены зависимости температуры оболочки и теплоносителя от высоты АЗ, было выяснено, что поверхностного кипения не наблюдается, и максимальная тепература оболочки твэла 341.6 $^\circ C$ не превышает предельно допустимую.
+   \item Определена зависимость температуры топлива от высоты АЗ, максимальная температура топлива $1464 ^\circ C$ не превышает предельное значение $1900 ^\circ C$.
 \end{enumerate}
 
 % \section{Нейтронно-физический расчет}
