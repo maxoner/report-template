@@ -38,7 +38,7 @@
 *.xdy
 *.tdo
 *.nls
-# *.pdf
+*.pdf
 Референсы/
 venv/
 __pycache__/
