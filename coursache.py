@@ -1,9 +1,11 @@
+from string import Formatter
+from typing import Any, Callable, Mapping
 import jinja2
 from jinja2 import Template
 import os
 import sys
 import re
-
+import sys
 
 
 #спизженно
@@ -88,11 +90,31 @@ def tex_exp(*a, after_comma=3):
         if not int(ae[1]):
             container.append(f'{ae[0]} ')
         else:
-            container.append(f'{ae[0]} \cdot 10^{{ { ae[1] } }}')
+            container.append(f'{ae[0]} \cdot 10^{{ { ae[1].removeprefix("0") } }}')
 
     if len(container) == 1:
         return container[0]
     return tuple(container)
+
+
+class Equation(str):
+    def render(self,
+               source: Mapping[str, Any],
+               after_comma=3) -> 'Equation':
+        unsugared_str = self.replace('{', '{{').replace('}', '}}') \
+                            .replace('.[', '{').replace('].', '}')
+        keys_placeholders = {key for _, key, _, _ in Formatter().parse(unsugared_str) if key is not None}
+        vars = source
+        kwargs = {name: tex_exp(vars[name], after_comma=after_comma).replace('{', '{{').replace('}', '}}') for name in keys_placeholders}
+        return Equation(unsugared_str.format(**kwargs))
+
+    def show(self) -> None:
+        from IPython.display import Math
+        display(Math(self))
+
+    def code(self) -> None:
+        print(self)
+
 
 def exporenitze(func, *args):
     return func(*tex_exp(*args))
